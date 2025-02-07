@@ -1,17 +1,30 @@
-fun DrawContext.drawMain() {
-    val algorithm: LineDrawingAlgorithm = DDA
-    val line = Line(2, 2, 4, 5)
-    with(algorithm) {
-        drawLine(line)
-    }
-}
+//fun DrawContext.drawMain() {
+//        Test.drawLine(this@drawMain)
+//}
+
+
+//object Test {
+//    fun drawLine(context: DrawContext) {
+//        for (i in 0 until 100) {
+//            for (j in 0 until 100) {
+//                if (j % 5 == 0) {
+//                    //TODO: I think i will need to flip the Y value to match the book
+//                    context.setPixel(i, j)
+//                }
+//            }
+//        }
+//    }
+//}
+
+
+
 
 
 object DDA : LineDrawingAlgorithm {
     override fun DrawContext.drawLine(line: Line) {
         for (i in 0 until 100) {
             for (j in 0 until 100) {
-                if (j % 5 == 0) {
+                if (j % 10 == 0) {
                     //TODO: I think i will need to flip the Y value to match the book
                     setPixel(i, j)
                 }
